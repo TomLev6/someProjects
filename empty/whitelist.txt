@@ -1,0 +1,14 @@
+ def __init__(self):
+        """
+        the init function, which initializes all the parameters.
+        creates the connection string which later we using to connect to the database.
+        """
+        # Connect to the database
+        self.DRIVER_NAME = 'SQL SERVER'
+        self.SERVER_NAME = "DESKTOP-4K52IRC"
+        self.DATABASE_NAME = 'SQLTutorial'
+        # uid=<username>;
+        # pwd=<password>;
+        self.conn_string = f"""DRIVER={{{self.DRIVER_NAME}}};
+        SERVER={self.SERVER_NAME};DATABASE={self.DATABASE_NAME};
+        Trust_Connection=yes;"""
